@@ -44,7 +44,8 @@ function getTodayDate () {
   return formatDate;
 }
 
-function buildDom(localData) {
+function buildDom() {
+  var localData = JSON.parse(localStorage.getItem("dailyEntry"));
   var formatDate = getTodayDate();
   var filteredTodos = localData.filter(function(item){
     return item.date === formatDate;
@@ -75,14 +76,13 @@ function renderTodo(){
       localData.unshift({date: formatDate, todos: [{id: 1, name: '', from: '', to: '', status: false}], counter: 1 });
       localStorage.setItem('dailyEntry', localData);
     }
-      
-    // buildDom
-    buildDom(localData);
 
   } else {
-   
     localStorage.setItem("dailyEntry", JSON.stringify([{date: formatDate, todos: [{id: 1, name: '', from: '', to: '', status: false}], counter: 1 }] ));
   }
+
+  // buildDom
+  buildDom();
 }
 
 renderTodo();
