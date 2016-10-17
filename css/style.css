@@ -141,10 +141,10 @@ h1 {
 .pie-wrapper.progress-45 .pie .half-circle {
   border-color: #1abc9c;
 }
-.pie-wrapper.progress-45 .pie .left-side {
+/*.pie-wrapper.progress-45 .pie .left-side {
   -webkit-transform: rotate(162deg);
           transform: rotate(162deg);
-}
+}*/
 .pie-wrapper--solid {
   border-radius: 50%;
   overflow: hidden;
