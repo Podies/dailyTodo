@@ -3,28 +3,46 @@
 h1 {
 	margin: 40px 0;
 }
+.to-do.container {
+  padding-right: 30px;
+  padding-left: 30px;
+}
 .event {
 	box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
-	padding: 20px 0 80px 0px;
+	padding: 20px 20px 127px 20px;
+  position: relative;
 }
 .checkbox {
 	margin-top: 20px;
 	background: #fff;
 }
 
-.glyphicon {
-	position: fixed;
-	top: 230px;
+.glyphicon-plus {
+  position: absolute;
+  right: 20px;
+  top: 135px;
 	font-size: 40px;
-	margin-left: 20px;
 	color: #fff;
 	height: 40px;
+  cursor: pointer;
 	width: 40px;
 	background: #1abc9c;
 	border-radius: 50%;
 }
 .glyphicon-plus:before {
 	margin-left: 9px;
+}
+.form-control {
+  border: 0;
+  box-shadow: none;
+  outline: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  border-radius: 0;
+}
+.form-control:focus {
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  box-shadow: none;
+  outline: 0;
 }
  input[type="checkbox"]{
   width: 38px; /*Desired width*/
@@ -33,7 +51,18 @@ h1 {
   border-radius: 50%;
   background: #fff;
 }
-
+.chart.col-md-3 {
+  padding-left: 30px;
+}
+.score {
+   box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+   padding-bottom: 20px;
+}
+.chart label {
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+}
 .set-size {
   font-size: 10em;
   position: relative;
@@ -47,6 +76,8 @@ h1 {
   height: 1em;
   width: 1em;
   float: right;
+  margin-right: 35px;
+  margin-top: 10px;
   position: relative;
 }
 .pie-wrapper:nth-child(3n+1) {
@@ -129,4 +160,20 @@ h1 {
 }
 .pie-wrapper--solid .label {
   background: transparent;
+}
+
+
+.edit-button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #1abc9c;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 10px 12px;
+}
+.edit-button img{
+  height: 15px;
+  width: 15px;
 }
